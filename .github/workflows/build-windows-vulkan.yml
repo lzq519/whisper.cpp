@@ -1,4 +1,4 @@
-name: CI (windows)
+name: CI (windows-vulkan)
 
 on:
   workflow_dispatch: # allows manual triggering
@@ -67,7 +67,7 @@ jobs:
         run: |
             rm -rf build
 
-      - name: Build using CMake w/ OpenBLAS
+      - name: Build using CMake w/ Vulkan
         shell: msys2 {0}
         run: |
             cmake -B build -DGGML_VULKAN=1
